@@ -1,0 +1,4 @@
+# Generate neurodocker image for Dynconn pipeline, here Python 3.6
+neurodocker generate singularity --base ubuntu:bionic --pkg-manager apt --miniconda use_env=base conda_install="numpy scipy pandas matplotlib scikit-learn ipython joblib nibabel nilearn nitime" > dynconn_Singularity
+
+sudo singularity build dynconn_Singularity.sif dynconn_Singularity 
